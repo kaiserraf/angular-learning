@@ -1,0 +1,21 @@
+<p>entry-data works!</p>
+<input type="text"
+[value]="placeholder"
+(input)="placeholder = $any($event.target).value"
+/>
+<p>{{placeholder}}</p>
+
+
+<input type="text"
+[(ngModel)]="placepass"
+/>
+<p [style.color]="color">{{placepass}}</p>
+
+<!--
+use [] to bind from source to view
+
+use () to bindo from view to source
+
+use [()] to bind in a two way sequence of view do source to view
+
+-->

@@ -1,0 +1,27 @@
+<h1>app.html</h1>
+
+<h1>Bem vindo ao APP</h1>
+<p>aplicação de testes angular</p>
+<app-create-user></app-create-user>
+
+<!--
+DATA BINDING = ASSOCIAÇÃO DE DADOS
+TWO WAY DATA BINDING = ASSOCIAÇÃO DE DOIS LADOS
+-->
+
+<!-- INTERPOLAÇÃO -->
+<app-buttons label="{{buttonLabel}}"></app-buttons>
+<app-buttons label="buttonLabel"></app-buttons> <!-- vai mostrar texto-->
+
+<!-- PROPERTY BINDING -->
+<app-buttons [label]="buttonSecond"></app-buttons>
+<app-buttons [label]="'buttonSecond'"></app-buttons> <!-- vai mostrar texto-->
+
+<!-- two way data binding -->
+<app-entry-data></app-entry-data>
+
+<router-outlet />
+<!--
+e nescessário sempre deixar a router-outlet caso queira que as rotas
+do 'app.routes.ts' sejam mostradas 
+-->

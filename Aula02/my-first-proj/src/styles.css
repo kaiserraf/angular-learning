@@ -1,0 +1,39 @@
+/* Botão estilo iOS (pílula azul) */
+.btn-ios {
+    /* Cor azul do sistema iOS no modo escuro */
+    --ios-blue: #0a84ff;
+
+    background-color: var(--ios-blue);
+    color: #fff;
+
+    /* Tipografia: usa a fonte do sistema Apple, com fallbacks */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    /* Formato de pílula */
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px;
+
+    cursor: pointer;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent; /* remove o flash cinza no mobile */
+}
+
+/* Feedback ao passar o mouse */
+.btn-ios:hover {
+    opacity: 0.9;
+}
+
+/* Feedback ao pressionar, como no iOS */
+.btn-ios:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+/* Acessibilidade: contorno visível ao navegar pelo teclado */
+.btn-ios:focus-visible {
+    outline: 3px solid rgba(10, 132, 255, 0.5);
+    outline-offset: 2px;
+}
