@@ -1,0 +1,17 @@
+<app-personalize-titles
+    nome = "Rafael Machado"
+></app-personalize-titles>
+
+<app-personalize-titles
+    nome = "Isis Fernandes"
+></app-personalize-titles>
+
+
+@if(isAliveCheckSample) {
+    <app-check-sample></app-check-sample>
+}
+
+<button (click)="disposeCheckSample()">Matar</button>
+
+
+<router-outlet />
