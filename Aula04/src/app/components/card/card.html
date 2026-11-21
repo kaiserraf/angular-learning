@@ -1,0 +1,65 @@
+<h1>My App</h1>
+<p>card works!</p>
+
+<!--
+<ul>
+    @for(produto of produtos; track produto){
+        <li>{{produto}}</li>
+    }
+</ul>
+-->
+
+<table>
+    <thead>
+        <tr>
+            <th>index</th> 
+            <th>Informação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(produto of produtos; track $index){
+            <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ produto }}</td>
+                <td> <button (click)="remover($index)">Remover</button> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<input #novoProduto type="text" placeholder="Novo Produto">
+<button (click)="adicionar(novoProduto.value)">Adicionar</button>
+
+<div>
+    @switch (profileType) {
+        @case ("user") {
+            <div>
+                <ul>
+                    <li>Adicionar Cartão</li>
+                    <li>Ver Cartão</li>
+                </ul>
+            </div>
+        }
+        @case ("admin") {
+            <div>
+                <ul>
+                    <li>Adicionar Cartão</li>
+                    <li>Ver Cartão</li>
+                    <li>Gerenciar Usuarios</li>
+                </ul>
+            </div>
+        }
+        @case ("superuser") {
+            <div>
+                <ul>
+                    <li>Adicionar Cartão</li>
+                    <li>Ver Cartão</li>
+                    <li>Gerenciar Usuarios</li>
+                    <li>Gerenciar Adiministradores</li>
+                </ul>
+            </div>
+        }
+        @default {
+            <p>faz porra nenhuma KKKKKKKKKKKK</p>
+        }
+    }
+</div>

@@ -1,0 +1,15 @@
+<ng-content select="h2"></ng-content>
+
+<p [class]="estilo">atributos works!</p>
+<button (click)="mudarEstilo()">Habilitar/Desabilitar</button>
+
+<h1 [style]="{
+    'background': corFundo,
+    'color': corFonte
+}">Curso Angular aula 04</h1>
+
+
+<input placeholder="Digite aqui" type="text" [(ngModel)]="item">
+<p>{{ item }}</p>
+
+<ng-content select="p"></ng-content>
